@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Not Cami | Junior Web Developer</title>
+    <meta
+      name="description"
+      content="Camilla — Web Developer & Designer. Progetti, competenze e contatti."
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/img/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/img/favicon-32x32.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/img/apple-touch-icon.png"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <!-- Navbar Sticky -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark"
+      role="navigation"
+      aria-label="Main Navigation"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="#home">
+          <img src="assets/img/logo.svg" alt="Logo NotCami" />
+          <span>NotCami</span>
+        </a>
+
+        <!-- Checkbox per toggle menu mobile (solo CSS) -->
+        <input
+          id="nav-toggle"
+          class="navbar-toggle-checkbox"
+          type="checkbox"
+          aria-hidden="true"
+        />
+        <label class="navbar-toggler" for="nav-toggle" aria-label="Apri menu">
+          <span class="navbar-toggler-icon" aria-hidden="true"></span>
+        </label>
+
+        <div class="navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../my-website/portfolio/index.html">Progetti</a>
+            </li>
+           
+            <li class="nav-item">
+              <a class="nav-link" href="../my-website/contacts/index.html">Contatti</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="decoration-circle circle-1"></div>
+      <div class="decoration-circle circle-2"></div>
+
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 hero-content">
+            <h1 class="hero-title">Ciao, Sono<br />Camilla</h1>
+            <h2 class="hero-subtitle">Web Developer & Designer</h2>
+            <p class="hero-description">
+              Creo esperienze digitali uniche e innovative. Specializzata in
+              sviluppo web moderno, design responsive e soluzioni creative che
+              fanno la differenza.
+            </p>
+            <div class="d-flex flex-column flex-md-row gap-3">
+              <a href="#progetti" class="btn btn-primary-custom" role="button">
+                Scopri i Progetti
+              </a>
+              <a
+                href="../my-website/contacts/index.html"
+                class="btn btn-secondary-custom"
+                role="button"
+              >
+                Contattami
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-6 hero-image text-center">
+            <div class="floating">
+              <img
+                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 500'%3E%3Crect fill='%231A1A1A' width='500' height='500'/%3E%3Ccircle cx='250' cy='250' r='150' fill='none' stroke='%23FF5900' stroke-width='4'/%3E%3Ccircle cx='250' cy='250' r='100' fill='none' stroke='%23FF5900' stroke-width='3' opacity='0.6'/%3E%3Ccircle cx='250' cy='250' r='50' fill='%23FF5900' opacity='0.8'/%3E%3Ctext x='250' y='265' font-size='80' fill='%23FFFFFF' text-anchor='middle' font-family='Arial, sans-serif' font-weight='bold'%3E%7B %7D%3C/text%3E%3C/svg%3E"
+                alt="Hero Image rappresentante codice"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <div class="row align-items-center gy-4">
+          <div class="col-lg-7">
+            <div class="section-header text-start">
+              <h2 class="section-title">Chi sono</h2>
+              <p class="section-subtitle">
+                Background, passioni e cosa mi piace costruire.
+              </p>
+            </div>
+
+            <p class="about-text">
+              Mi chiamo Camilla, ho 27 anni e sono una junior web developer con
+              una grande curiosità e voglia di crescere. Mi appassionano la
+              tecnologia, il design e tutto ciò che riguarda la creatività
+              digitale. Quando sviluppo, cerco sempre di unire logica e
+              estetica: da un lato amo scrivere codice pulito ed efficiente,
+              dall'altro mi piace dare vita a interfacce chiare e moderne.
+            </p>
+
+            <p class="about-text">
+              Oltre all'informatica, una mia grande passione è il gaming 🎮, in
+              particolare <strong>Valorant</strong>. Seguo con interesse la
+              scena competitiva e faccio il tifo per
+              <strong>Fnatic</strong> 💛🖤. Giocare online mi ha insegnato
+              molto: lavorare in squadra, comunicare in modo chiaro e saper
+              affrontare le sfide con calma e concentrazione.
+            </p>
+
+            <p class="about-text">
+              Come persona mi considero solare, empatica e testarda al punto
+              giusto: quando mi metto in testa un obiettivo, non mollo finché
+              non lo raggiungo. Mi piace mettermi in gioco, imparare cose nuove
+              e trasformare ogni progetto in un'occasione per crescere. Credo
+              che la passione e la dedizione siano le chiavi per migliorarsi
+              giorno dopo giorno, sia nel lavoro che nella vita personale.
+            </p>
+
+            <ul class="about-list">
+              <li>🎓 Master in Web Development (Start2Impact)</li>
+              <li>
+                💻 Tecnologie preferite: HTML, CSS (Sass), JavaScript, Bootstrap
+              </li>
+              <li>
+                🎨 Amo il visual design, il pixel-perfect e le animazioni
+                leggere
+              </li>
+              <li>
+                🎮 Nel tempo libero gioco e creo contenuti legati al gaming
+              </li>
+            </ul>
+
+            <div class="mt-4">
+              <a href="../my-website/portfolio/index.html" class="btn-project">Vedi Progetti</a>
+              <a href="../my-website/contacts/index.html" class="btn-project-outline">Contattami</a>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="profile-card">
+              <img
+                src="assets/img/avatar-pixel.svg"
+                alt="Avatar pixel di Camilla"
+                class="profile-avatar"
+              />
+
+              <h3 class="profile-name">Camilla — Junior Web Developer</h3>
+              <p class="profile-bio">
+                Front-end developer focalizzata su UI pulite, accessibilità e
+                performance.
+              </p>
+
+              <div id="skills" class="skills-section mt-3">
+                <h4 class="small-title">Skills</h4>
+                <ul class="skills-list">
+                  <li class="skill-item">HTML &amp; CSS (Sass)</li>
+                  <li class="skill-item">JavaScript (ES6+)</li>
+                  <li class="skill-item">Bootstrap / Responsive</li>
+                  <li class="skill-item">Git &amp; GitHub</li>
+                  <li class="skill-item">Design tools (Canva)</li>
+                </ul>
+              </div>
+
+              <div class="stat-grid mt-3">
+                <div class="stat">
+                  <div class="stat-value">5+</div>
+                  <div class="stat-label">Progetti</div>
+                </div>
+                <div class="stat">
+                  <div class="stat-value">2</div>
+                  <div class="stat-label">Lingue</div>
+                </div>
+                <div class="stat">
+                  <div class="stat-value">1</div>
+                  <div class="stat-label">Anno esperienza</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Esperienze -->
+        <div class="row mt-5">
+          <div class="col-12">
+            <h3 class="timeline-heading">Esperienze</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <strong>05/2025 - in corso</strong> — Freelancer: progetti
+                digitali per clienti, graphic design, sviluppo siti web con
+                HTML, CSS, JavaScript, gestione clienti e ottimizzazione
+                processi.
+              </div>
+              <div class="timeline-item">
+                <strong>2025</strong> — Progetti personali e redesign portfolio
+              </div>
+              <div class="timeline-item">
+                <strong>09/2024 - 01/2025</strong> — Contabile, Studio
+                Commercialista SIDI: supporto contabile, gestione prima nota e
+                documenti fiscali.
+              </div>
+              <div class="timeline-item">
+                <strong>08/2021 - 03/2024</strong> — Addetta Amministrazione,
+                Proloco Salzano: gestione documentazione cartacea e digitale,
+                fatturazione, ottimizzazione archivi, supporto alla
+                comunicazione interna.
+              </div>
+              <div class="timeline-item">
+                <strong>05/2018 - 03/2021</strong> — Responsabile Servizi
+                Sicurezza, Sicuritalia S.P.A.: coordinamento team, gestione
+                report, formazione personale, supervisione dei servizi di
+                sicurezza.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <footer class="footer">
+    <div class="container text-center">
+      <p class="footer-text">
+        &copy; 2024 Camilla. Tutti i diritti riservati.
+      </p>
+      <p class="footer-text">
+        Realizzato con
+        <span role="img" aria-label="cuore">❤️</span> da Camilla
+      </p>
+    </div>  
+</html>

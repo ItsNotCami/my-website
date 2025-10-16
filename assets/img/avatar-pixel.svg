@@ -1,0 +1,35 @@
+<!-- assets/img/avatar-pixel.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="512" height="512" shape-rendering="crispEdges" role="img" aria-label="Avatar pixel di Camilla">
+  <!-- Palette:
+       bg = #0D0D0D (nero)
+       skin = #F2C9B8
+       hair = #4B2E2E (marrone scuro)
+       hair-highlight = #6B4A4A
+       eyes = #0D0D0D
+       shirt = #FF5900 (arancione)
+       shirt-shadow = #CC4700
+  -->
+  <!-- background -->
+  <rect x="0" y="0" width="16" height="16" fill="#0D0D0D"/>
+  <!-- hair top -->
+  <rect x="3" y="1" width="10" height="1" fill="#4B2E2E"/>
+  <rect x="2" y="2" width="12" height="1" fill="#4B2E2E"/>
+  <rect x="2" y="3" width="2" height="1" fill="#4B2E2E"/>
+  <rect x="12" y="3" width="2" height="1" fill="#4B2E2E"/>
+  <rect x="4" y="3" width="8" height="1" fill="#6B4A4A"/> <!-- highlight -->
+  <!-- face -->
+  <rect x="4" y="4" width="8" height="6" fill="#F2C9B8"/>
+  <!-- eyes -->
+  <rect x="6" y="6" width="1" height="1" fill="#0D0D0D"/>
+  <rect x="9" y="6" width="1" height="1" fill="#0D0D0D"/>
+  <!-- mouth -->
+  <rect x="7" y="8" width="2" height="1" fill="#CC4700"/>
+  <!-- hair sides -->
+  <rect x="3" y="4" width="1" height="4" fill="#4B2E2E"/>
+  <rect x="12" y="4" width="1" height="4" fill="#4B2E2E"/>
+  <!-- neck -->
+  <rect x="7" y="10" width="2" height="1" fill="#F2C9B8"/>
+  <!-- shirt -->
+  <rect x="3" y="11" width="10" height="4" fill="#FF5900"/>
+  <rect x="3" y="13" width="10" height="1" fill="#CC4700"/> <!-- shadow -->
+</svg>

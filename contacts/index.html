@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contatti | Not Cami</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+  <body>
+    <!-- Navbar (stesso stile della home) -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">
+          <img src="../assets/img/logo.svg" alt="Logo" />
+          <span>NotCami</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../portfolio/index.html">Progetti</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Contatti</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero / Sezione Contatti -->
+    <section class="hero" id="contact">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <h2 class="hero-title text-center mb-4">Contattami</h2>
+            <p class="hero-subtitle text-center mb-5">
+              Vuoi collaborare con me o chiedere informazioni sui miei progetti?
+              Compila il form qui sotto!
+            </p>
+
+            <!-- Form contatti -->
+            <form class="bg-dark p-4 rounded-4 shadow" novalidate>
+              <div class="mb-3">
+                <label for="name" class="form-label">Nome e Cognome *</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  name="name"
+                  placeholder="Es. Camilla Rossi"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email *</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  placeholder="esempio@mail.com"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="company" class="form-label">Azienda</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="company"
+                  name="company"
+                  placeholder="Nome azienda"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="role" class="form-label">Ruolo</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="role"
+                  name="role"
+                  placeholder="Es. Project Manager"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="projectType" class="form-label"
+                  >Tipo progetto</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="projectType"
+                  name="projectType"
+                  placeholder="Es. Sito web, App..."
+                />
+              </div>
+              <div class="mb-3">
+                <label for="budget" class="form-label">Budget</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="budget"
+                  name="budget"
+                  placeholder="Es. 1000€ - 5000€"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Messaggio *</label>
+                <textarea
+                  class="form-control"
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Scrivi qui il tuo messaggio"
+                  required
+                ></textarea>
+              </div>
+              <div class="form-check mb-4">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="consent"
+                  name="consent"
+                  required
+                />
+                <label class="form-check-label" for="consent">
+                  Acconsento al trattamento dei dati secondo GDPR *
+                </label>
+              </div>
+              <div class="d-grid">
+                <button type="submit" class="btn btn-primary-custom">
+                  Invia Messaggio
+                </button>
+              </div>
+            </form>
+            <!-- Fine Form -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
