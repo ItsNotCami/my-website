@@ -1,4 +1,3 @@
-// _about.scss
 @use "variables" as *;
 
 .about-section {
@@ -6,11 +5,64 @@
   background: linear-gradient(180deg, $fnatic-dark 0%, $fnatic-black 100%);
   color: $text-light;
 
+  .section-header { margin-bottom: 3rem; }
+
   .section-title {
-    font-size: 3.5rem;
-    font-weight: 900;
+    font-size: 3.5rem; font-weight: 900; margin-bottom: 1rem;
     background: linear-gradient(135deg, $text-light 0%, $fnatic-orange 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  }
+
+  .section-subtitle { font-size: 1.2rem; color: $text-gray; margin-bottom: 1.5rem; }
+
+  .about-text { color: $text-gray; line-height: 1.8; margin-bottom: 1.5rem; font-size: 1.05rem; }
+
+  .about-list {
+    list-style: none; margin-top: 1.5rem; padding-left: 0; display: flex; flex-direction: column; gap: .75rem;
+    li { color: $text-gray; font-size: 1.05rem; }
   }
 }
+
+.profile-card {
+  background: linear-gradient(180deg, rgba(42, 42, 42, .6), rgba(26, 26, 26, .6));
+  border: 1px solid rgba(255, 89, 0, .2);
+  padding: 2rem; border-radius: 15px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,.3);
+
+  .profile-avatar {
+    width: 120px; height: 120px; object-fit: cover; border-radius: 50%;
+    border: 3px solid $fnatic-orange; margin: 0 auto 1rem; display: block;
+  }
+
+  .profile-name { margin-bottom: .5rem; font-size: 1.3rem; font-weight: 700; color: $text-light; }
+  .profile-bio { color: $text-gray; font-size: 1rem; margin-bottom: 1rem; line-height: 1.6; }
+}
+
+.skills-section { margin-top: 1.5rem; }
+.small-title { font-size: 1rem; color: $fnatic-orange; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600; }
+
+.skills-list {
+  list-style: none; padding: 1rem; display: flex; flex-direction: column; gap: .75rem;
+  background: rgba(255, 89, 0, .05); border-radius: 10px;
+}
+
+.skill-item {
+  background: rgba(255,255,255,.05); padding: .75rem 1rem; border-radius: 8px; font-size: .95rem; color: $text-light;
+  border: 1px solid rgba(255,255,255,.1); transition: .3s;
+
+  &:hover { background: rgba(255, 89, 0, .1); border-color: $fnatic-orange; transform: translateX(5px); }
+}
+
+.stat-grid {
+  display: flex; gap: 1rem; justify-content: center; margin-top: 1.5rem; flex-wrap: wrap;
+
+  .stat {
+    background: rgba(255,255,255,.03); padding: 1rem 1.5rem; border-radius: 10px; min-width: 110px;
+    border: 1px solid rgba(255,255,255,.05); transition: .3s;
+
+    &:hover { background: rgba(255, 89, 0,.1); border-color: $fnatic-orange; transform: translateY(-3px); }
+
+    .stat-value { font-size: 2rem; font-weight: 800; color: $fnatic-orange; line-height: 1; }
+    .stat-label { font-size: .85rem; color: $text-gray; margin-top: .5rem; }
+  }
+}
+

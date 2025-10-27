@@ -1,0 +1,31 @@
+@use "variables" as *;
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: .5; }
+  50% { transform: scale(1.2); opacity: .8; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(50px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes floating {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes bounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}

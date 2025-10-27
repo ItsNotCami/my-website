@@ -1,0 +1,21 @@
+@use "variables" as *;
+
+.timeline-heading { font-size: 2rem; color: $fnatic-orange; margin-bottom: 2rem; font-weight: 700; }
+
+.timeline {
+  margin-top: 2rem; display: flex; flex-direction: column; gap: 1.5rem;
+
+  .timeline-item {
+    padding: 1.25rem 1.5rem; border-left: 4px solid $fnatic-orange; background: rgba(255,255,255,.03);
+    border-radius: 8px; position: relative; font-size: 1rem; line-height: 1.7; color: $text-gray; transition: .3s;
+
+    &:hover { background: rgba(255, 89, 0,.05); border-left-color: $text-light; transform: translateX(5px); }
+
+    &::before {
+      content: ""; position: absolute; left: -10px; top: 1.5rem; width: 16px; height: 16px;
+      background-color: $fnatic-orange; border-radius: 50%; border: 3px solid $fnatic-black; transition: .3s;
+    }
+    &:hover::before { background-color: $text-light; box-shadow: 0 0 10px $fnatic-orange; }
+    strong { color: $fnatic-orange; font-weight: 600; }
+  }
+}

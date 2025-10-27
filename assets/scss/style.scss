@@ -1,10 +1,15 @@
 // style.scss — file principale Sass
 @use "variables" as *;
 @use "base";
+@use "animations";
 @use "navbar";
 @use "hero";
+@use "decorations";
+@use "buttons";
 @use "about";
+@use "timeline";
 @use "portfolio";
 @use "contacts";
 @use "footer";
-
+@use "responsive";
+@use "patches";

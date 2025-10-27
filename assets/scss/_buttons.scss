@@ -1,0 +1,42 @@
+@use "variables" as *;
+
+.btn-primary-custom {
+  background: linear-gradient(135deg, $fnatic-orange 0%, #cc4700 100%);
+  border: none; color: $text-light; padding: 1rem 2.5rem; font-size: 1.1rem; font-weight: 600;
+  border-radius: 50px; transition: .3s; animation: fadeInUp 1s ease .6s backwards;
+  box-shadow: 0 10px 30px rgba(255, 89, 0, .4); text-transform: uppercase; letter-spacing: 1px; display: inline-block; text-decoration: none;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(255, 89, 0, .6);
+    background: linear-gradient(135deg, #cc4700 0%, $fnatic-orange 100%);
+    color: $text-light;
+  }
+}
+
+.btn-secondary-custom {
+  background: transparent; border: 2px solid $fnatic-orange; color: $fnatic-orange;
+  padding: 1rem 2.5rem; font-size: 1.1rem; font-weight: 600; border-radius: 50px; transition: .3s; animation: fadeInUp 1s ease .8s backwards;
+  text-transform: uppercase; letter-spacing: 1px; display: inline-block; text-decoration: none;
+
+  &:hover {
+    background: $fnatic-orange; color: $text-light; transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255, 89, 0, .4);
+  }
+}
+
+/* bottoni about */
+.btn-project {
+  background: $fnatic-orange; color: $text-light; padding: .9rem 2rem; border-radius: 30px;
+  font-weight: 600; text-decoration: none; transition: .3s; display: inline-block; text-transform: uppercase; font-size: .9rem; letter-spacing: 1px;
+  margin-right: 1rem; margin-bottom: 1rem;
+
+  &:hover { background: #cc4700; color: $text-light; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(255, 89, 0, .4); }
+}
+
+.btn-project-outline {
+  background: transparent; color: $fnatic-orange; padding: .9rem 2rem; border: 2px solid $fnatic-orange; border-radius: 30px;
+  font-weight: 600; text-decoration: none; transition: .3s; display: inline-block; text-transform: uppercase; font-size: .9rem; letter-spacing: 1px; margin-bottom: 1rem;
+
+  &:hover { background: $fnatic-orange; color: $text-light; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(255, 89, 0, .4); }
+}

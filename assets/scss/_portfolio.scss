@@ -1,16 +1,96 @@
-// _portfolio.scss
 @use "variables" as *;
 
+/* sezione */
 .progetti {
-  padding: 6rem 0;
-  background-color: $fnatic-dark;
-  position: relative;
-  min-height: 100vh;
+  padding: 6rem 0; background-color: $fnatic-dark; position: relative; min-height: 100vh;
+
+  .section-header { text-align: center; }
+  .progetti-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem; margin-top: 3rem;
+  }
 }
 
-.progetti-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
+/* large */
+.progetto-large { grid-column: span 2; grid-row: span 2; }
+
+.progetto-card {
+  position: relative; border-radius: 15px; overflow: hidden; background-color: $fnatic-gray; transition: transform .3s, box-shadow .3s; cursor: pointer;
+
+  &:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(255, 89, 0,.3); }
+
+  .progetto-image {
+    position: relative; width: 100%; height: 100%; min-height: 350px; overflow: hidden;
+
+    img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
+  }
+  &:hover .progetto-image img { transform: scale(1.1); }
+
+  .progetto-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(13,13,13,.95) 0%, rgba(255,89,0,.9) 100%);
+    display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity .4s;
+  }
+  &:hover .progetto-overlay { opacity: 1; }
+
+  .progetto-info {
+    padding: 2rem; text-align: center; transform: translateY(20px); transition: transform .4s;
+  }
+  &:hover .progetto-info { transform: translateY(0); }
+
+  .progetto-category {
+    display: inline-block; background-color: $fnatic-orange; color: $text-light; padding: .3rem 1rem; border-radius: 20px;
+    font-size: .85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem;
+  }
+
+  .progetto-title { font-size: 1.8rem; font-weight: 700; color: $text-light; margin-bottom: 1rem; }
+  .progetto-description { font-size: 1rem; color: $text-gray; line-height: 1.6; margin-bottom: 1.5rem; }
+
+  .progetto-tags {
+    display: flex; flex-wrap: wrap; gap: .5rem; justify-content: center; margin-bottom: 1.5rem;
+
+    .tag {
+      background-color: rgba(255,255,255,.1); color: $text-light; padding: .4rem .8rem; border-radius: 15px; font-size: .8rem; font-weight: 500;
+      border: 1px solid rgba(255,255,255,.2); transition: .3s;
+
+      &:hover { background-color: $fnatic-orange; border-color: $fnatic-orange; transform: translateY(-2px); }
+    }
+  }
+
+  .progetto-links {
+    display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+
+    .btn-project {
+      background: $text-light; color: $fnatic-black; padding: .8rem 2rem; border-radius: 30px; font-weight: 600; text-decoration: none;
+      transition: .3s; display: inline-block; text-transform: uppercase; font-size: .9rem; letter-spacing: 1px; margin: 0;
+
+      &:hover { background: $fnatic-orange; color: $text-light; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(255, 89, 0,.4); }
+    }
+
+    .btn-project-outline {
+      background: transparent; color: $text-light; padding: .8rem 2rem; border: 2px solid $text-light; border-radius: 30px; font-weight: 600; text-decoration: none;
+      transition: .3s; display: inline-block; text-transform: uppercase; font-size: .9rem; letter-spacing: 1px; margin: 0;
+
+      &:hover { background: $text-light; color: $fnatic-black; transform: translateY(-2px); }
+    }
+  }
+}
+
+/* coming soon */
+.progetto-coming-soon .progetto-image {
+  background: linear-gradient(135deg, $fnatic-gray 0%, $fnatic-black 100%);
+  border: 2px dashed $fnatic-orange;
+
+  .coming-soon-content { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; padding: 2rem; }
+  .coming-soon-icon { font-size: 4rem; margin-bottom: 1rem; animation: bounce 2s infinite; }
+  h3 { font-size: 1.5rem; color: $fnatic-orange; margin-bottom: .5rem; }
+  p { color: $text-gray; font-size: 1rem; }
+}
+
+/* responsive griglia */
+@media (max-width: 768px) {
+  .progetti .progetti-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .progetto-large { grid-column: span 1; grid-row: span 1; }
+  .progetto-info { padding: 1.5rem; }
+  .progetto-title { font-size: 1.3rem; }
 }
