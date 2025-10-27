@@ -34,3 +34,20 @@
     .floating { animation: floating 3s ease-in-out infinite; }
   }
 }
+
+/* layer pattern leggero sopra l'hero */
+.hero { position: relative; isolation: isolate; }
+.hero::after {
+  content: "";
+  position: absolute; inset: 0; z-index: 0;
+  background:
+    radial-gradient(ellipse at 70% 20%, rgba(255,89,0,.12), transparent 40%),
+    linear-gradient(135deg, rgba(255,255,255,.03), rgba(0,0,0,0) 60%),
+    repeating-linear-gradient(0deg, rgba(255,255,255,.03) 0 1px, transparent 1px 12px),
+    repeating-linear-gradient(90deg, rgba(255,255,255,.03) 0 1px, transparent 1px 12px);
+  filter: saturate(120%) contrast(105%);
+  pointer-events: none;
+}
+/* usa i token ombra */
+.hero .hero-image img { box-shadow: $shadow-glow; }
+

@@ -40,3 +40,21 @@
 
   &:hover { background: $fnatic-orange; color: $text-light; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(255, 89, 0, .4); }
 }
+
+/* stato press + focus accessibile */
+.btn-primary-custom, .btn-secondary-custom, .btn-project, .btn-project-outline {
+  position: relative; transform: translateZ(0);
+  &:active { transform: translateY(1px) scale(.995); }
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255,89,0,.35);
+  }
+}
+
+/* glow più ricco al passaggio (solo mouse) */
+@media (hover: hover) and (pointer:fine) {
+  .btn-primary-custom {
+    box-shadow: 0 10px 24px rgba(255,89,0,.3);
+    &:hover { box-shadow: 0 16px 36px rgba(255,89,0,.45); }
+  }
+}

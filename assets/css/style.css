@@ -16,6 +16,21 @@ body {
   overflow-x: hidden;
 }
 
+/* tipografia fluida */
+h1, .section-title {
+  font-size: clamp(2rem, 2rem + 2vw, 3.5rem);
+  line-height: 1.1;
+}
+
+h2, .hero-subtitle {
+  font-size: clamp(1.2rem, 1rem + 1vw, 1.5rem);
+  line-height: 1.25;
+}
+
+p, .about-text {
+  line-height: 1.7;
+}
+
 section {
   scroll-margin-top: 80px;
 }
@@ -103,6 +118,12 @@ a:focus:not(:focus-visible),
     transform: translateY(-10px);
   }
 }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
 .navbar {
   background-color: rgba(13, 13, 13, 0.95);
   backdrop-filter: blur(10px);
@@ -138,7 +159,7 @@ a:focus:not(:focus-visible),
   filter: drop-shadow(0 0 10px #ff5900);
 }
 
-/* hamburger  */
+/* hamburger “puro CSS” */
 .navbar-toggle-checkbox {
   display: none;
 }
@@ -329,6 +350,27 @@ a:focus:not(:focus-visible),
   animation: floating 3s ease-in-out infinite;
 }
 
+/* layer pattern leggero sopra l'hero */
+.hero {
+  position: relative;
+  isolation: isolate;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: radial-gradient(ellipse at 70% 20%, rgba(255, 89, 0, 0.12), transparent 40%), linear-gradient(135deg, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0) 60%), repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.03) 0 1px, transparent 1px 12px), repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.03) 0 1px, transparent 1px 12px);
+  filter: saturate(120%) contrast(105%);
+  pointer-events: none;
+}
+
+/* usa i token ombra */
+.hero .hero-image img {
+  box-shadow: 0 10px 30px rgba(255, 89, 0, 0.35);
+}
+
 .decoration-circle {
   position: absolute;
   border: 2px solid #ff5900;
@@ -442,6 +484,28 @@ a:focus:not(:focus-visible),
   box-shadow: 0 10px 20px rgba(255, 89, 0, 0.4);
 }
 
+/* stato press + focus accessibile */
+.btn-primary-custom, .btn-secondary-custom, .btn-project, .btn-project-outline {
+  position: relative;
+  transform: translateZ(0);
+}
+.btn-primary-custom:active, .btn-secondary-custom:active, .btn-project:active, .btn-project-outline:active {
+  transform: translateY(1px) scale(0.995);
+}
+.btn-primary-custom:focus-visible, .btn-secondary-custom:focus-visible, .btn-project:focus-visible, .btn-project-outline:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 89, 0, 0.35);
+}
+
+/* glow più ricco al passaggio (solo mouse) */
+@media (hover: hover) and (pointer: fine) {
+  .btn-primary-custom {
+    box-shadow: 0 10px 24px rgba(255, 89, 0, 0.3);
+  }
+  .btn-primary-custom:hover {
+    box-shadow: 0 16px 36px rgba(255, 89, 0, 0.45);
+  }
+}
 .about-section {
   padding: 6rem 0;
   background: linear-gradient(180deg, #1a1a1a 0%, #0d0d0d 100%);
@@ -892,7 +956,7 @@ a:focus:not(:focus-visible),
   transform: translateY(0);
 }
 
-/* già gestito in _base.scss, tenere qui solo extra */
+/* già gestito in _base.scss, tieni qui solo extra */
 .footer a.btn-project-outline {
   padding: 0.4rem 0.9rem;
   border-radius: 20px;

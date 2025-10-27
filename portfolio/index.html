@@ -6,7 +6,7 @@
     <title>Portfolio | NotCami — Web Developer & Designer</title>
     <meta
       name="description"
-      content="Esplora i miei progetti di web development e graphic design. Lavori realizzati in HTML, CSS, JavaScript e Canva con uno stile moderno e funzionale."
+      content="Esplora i miei progetti di web development e graphic design. Lavori in HTML, CSS, JavaScript e Canva con uno stile moderno e funzionale."
     />
 
     <!-- Open Graph -->
@@ -52,13 +52,19 @@
       sizes="32x32"
       href="../assets/img/favicon-32x32.png"
     />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/img/apple-touch-icon.png"
+    />
 
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <!-- Custom CSS -->
+
+    <!-- CSS -->
     <link rel="stylesheet" href="../assets/css/style.css" />
   </head>
   <body>
@@ -70,17 +76,31 @@
     >
       <div class="container">
         <a class="navbar-brand" href="../index.html">
-          <img src="../assets/img/logo.svg" alt="Logo NotCami" />
+          <img
+            src="../assets/img/logo.svg"
+            alt="Logo NotCami"
+            loading="lazy"
+            decoding="async"
+            width="40"
+            height="40"
+          />
           <span>NotCami</span>
         </a>
 
+        <!-- Toggle CSS-only -->
         <input
           id="nav-toggle"
           class="navbar-toggle-checkbox"
           type="checkbox"
           aria-hidden="true"
         />
-        <label class="navbar-toggler" for="nav-toggle" aria-label="Apri menu">
+        <label
+          class="navbar-toggler"
+          for="nav-toggle"
+          aria-label="Apri menu"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+        >
           <span class="navbar-toggler-icon" aria-hidden="true"></span>
         </label>
 
@@ -93,9 +113,10 @@
               <a class="nav-link" href="../index.html#skills">Skills</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Progetti</a>
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Progetti</a
+              >
             </li>
-
             <li class="nav-item">
               <a class="nav-link" href="../contacts/index.html">Contatti</a>
             </li>
@@ -104,122 +125,164 @@
       </div>
     </nav>
 
+    <!-- Hero introduttivo -->
+    <section class="hero hero-portfolio" id="portfolio-top">
+      <div class="container text-center">
+        <h1 class="hero-title">I Miei Progetti</h1>
+        <p class="hero-subtitle">
+          Una selezione dei lavori di cui vado più fiera
+        </p>
+      </div>
+      <!-- Decorazioni coerenti con home -->
+      <div class="decoration-circle circle-1" aria-hidden="true"></div>
+      <div class="decoration-circle circle-2" aria-hidden="true"></div>
+    </section>
+
     <!-- Sezione Progetti -->
     <section class="progetti" id="progetti">
       <div class="container">
-        <div class="section-header">
-          <h1 class="section-title">I Miei Progetti</h1>
-          <p class="section-subtitle">
-            Una selezione dei lavori di cui vado più fiera
-          </p>
+        <div class="section-header text-center">
+          <h2 class="section-title">Portfolio</h2>
+          <p class="section-subtitle">Web Development & Graphic Design</p>
         </div>
 
         <div class="progetti-grid">
-          <!-- Progetto 1 - Sito Web Start2Impact -->
+          <!-- Progetto 1 - Large -->
           <div class="progetto-card progetto-large">
             <div class="progetto-image">
               <img
                 src="../assets/img/progetti/sito-web-start2impact.jpg"
-                alt="Sito Web Start2Impact"
+                alt="Anteprima Portfolio Start2Impact"
+                loading="lazy"
+                decoding="async"
+                width="1600"
+                height="1000"
               />
               <div class="progetto-overlay">
                 <div class="progetto-info">
                   <span class="progetto-category">Web Development</span>
-                  <h2 class="progetto-title">Portfolio Start2Impact</h2>
+                  <h3 class="progetto-title">Portfolio Start2Impact</h3>
                   <p class="progetto-description">
-                    Sito web responsive realizzato come progetto finale per
-                    Start2Impact. HTML, CSS, JavaScript e design moderno.
+                    Sito web responsive creato per il progetto finale. HTML,
+                    CSS, JavaScript e design moderno.
                   </p>
                   <div class="progetto-tags">
                     <span class="tag">HTML</span>
-                    <span class="tag">CSS</span>
+                    <span class="tag">CSS/Sass</span>
                     <span class="tag">JavaScript</span>
                     <span class="tag">Responsive</span>
                   </div>
                   <div class="progetto-links">
-                    <a href="#" class="btn-project">Vedi Progetto</a>
-                    <a href="#" class="btn-project-outline">GitHub</a>
+                    <a
+                      href="#"
+                      class="btn-project"
+                      role="button"
+                      aria-label="Apri progetto Portfolio Start2Impact"
+                      >Vedi Progetto</a
+                    >
+                    <a
+                      href="#"
+                      class="btn-project-outline"
+                      role="button"
+                      aria-label="Apri repository GitHub del progetto"
+                      >GitHub</a
+                    >
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Progetto 2 - Manifesto Evento 1 -->
+          <!-- Progetto 2 -->
           <div class="progetto-card">
             <div class="progetto-image">
               <img
                 src="../assets/img/progetti/manifesto-evento-1.jpg"
-                alt="Manifesto Evento 1"
+                alt="Poster per evento musicale"
+                loading="lazy"
+                decoding="async"
+                width="1200"
+                height="750"
               />
               <div class="progetto-overlay">
                 <div class="progetto-info">
                   <span class="progetto-category">Graphic Design</span>
-                  <h2 class="progetto-title">Manifesto Evento Musicale</h2>
+                  <h3 class="progetto-title">Manifesto Evento Musicale</h3>
                   <p class="progetto-description">
-                    Design grafico per evento musicale con palette colori
-                    vibranti e tipografia moderna.
+                    Palette vibrante e tipografia moderna per promozione evento.
                   </p>
                   <div class="progetto-tags">
                     <span class="tag">Canva</span>
-                    <span class="tag">Print Design</span>
+                    <span class="tag">Print</span>
                   </div>
                   <div class="progetto-links">
-                    <a href="#" class="btn-project">Vedi Dettagli</a>
+                    <a href="#" class="btn-project" role="button"
+                      >Vedi Dettagli</a
+                    >
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Progetto 3 - Manifesto Evento 2 -->
+          <!-- Progetto 3 -->
           <div class="progetto-card">
             <div class="progetto-image">
               <img
                 src="../assets/img/progetti/manifesto-evento-2.jpg"
-                alt="Manifesto Evento 2"
+                alt="Locandina festival estivo"
+                loading="lazy"
+                decoding="async"
+                width="1200"
+                height="750"
               />
               <div class="progetto-overlay">
                 <div class="progetto-info">
                   <span class="progetto-category">Graphic Design</span>
-                  <h2 class="progetto-title">Locandina Festival Estivo</h2>
+                  <h3 class="progetto-title">Locandina Festival Estivo</h3>
                   <p class="progetto-description">
-                    Grafica per festival estivo con elementi illustrativi e
-                    composizione dinamica.
+                    Composizione dinamica con elementi illustrativi.
                   </p>
                   <div class="progetto-tags">
                     <span class="tag">Canva</span>
                     <span class="tag">Typography</span>
                   </div>
                   <div class="progetto-links">
-                    <a href="#" class="btn-project">Vedi Dettagli</a>
+                    <a href="#" class="btn-project" role="button"
+                      >Vedi Dettagli</a
+                    >
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Progetto 4 - Manifesto Evento 3 -->
+          <!-- Progetto 4 -->
           <div class="progetto-card">
             <div class="progetto-image">
               <img
                 src="../assets/img/progetti/manifesto-evento-3.jpg"
-                alt="Manifesto Evento 3"
+                alt="Poster evento sportivo"
+                loading="lazy"
+                decoding="async"
+                width="1200"
+                height="750"
               />
               <div class="progetto-overlay">
                 <div class="progetto-info">
                   <span class="progetto-category">Graphic Design</span>
-                  <h2 class="progetto-title">Poster Evento Sportivo</h2>
+                  <h3 class="progetto-title">Poster Evento Sportivo</h3>
                   <p class="progetto-description">
-                    Design minimal ed efficace per evento sportivo con focus
-                    sulla leggibilità.
+                    Design minimal con focus su leggibilità e brand.
                   </p>
                   <div class="progetto-tags">
                     <span class="tag">Illustrator</span>
-                    <span class="tag">Branding </span>
+                    <span class="tag">Branding</span>
                   </div>
                   <div class="progetto-links">
-                    <a href="#" class="btn-project">Vedi Dettagli</a>
+                    <a href="#" class="btn-project" role="button"
+                      >Vedi Dettagli</a
+                    >
                   </div>
                 </div>
               </div>
@@ -229,16 +292,17 @@
           <!-- Progetto 5 - Coming Soon -->
           <div class="progetto-card progetto-coming-soon">
             <div class="progetto-image">
-              <div class="coming-soon-content">
-                <div class="coming-soon-icon">🚀</div>
+              <div class="coming-soon-content" aria-live="polite">
+                <div class="coming-soon-icon" aria-hidden="true">🚀</div>
                 <h3>Prossimi Progetti</h3>
-                <p>Nuovi lavori in arrivo...</p>
+                <p>Nuovi lavori in arrivo…</p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+
     <!-- Footer -->
     <footer class="footer">
       <div class="container text-center">

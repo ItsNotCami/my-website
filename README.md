@@ -26,6 +26,7 @@ my-website/
 ├── index.html → Homepage / CV
 ├── portfolio/index.html → Pagina dei progetti
 ├── contacts/index.html → Pagina contatti (form)
+├── .gitignore → Per file temp
 │
 ├── assets/
 │ ├── css/
