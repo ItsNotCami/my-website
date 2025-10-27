@@ -1181,3 +1181,36 @@ a:focus:not(:focus-visible),
   background-color: var(--fnatic-orange);
   border-color: var(--fnatic-orange);
 }
+
+/* ========================================
+   SUCCESS MESSAGE (form contatti)
+   ======================================== */
+.alert-success-message {
+  display: none;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 89, 0, 0.15),
+    rgba(0, 0, 0, 0.3)
+  );
+  border: 1px solid rgba(255, 89, 0, 0.5);
+  color: var(--text-light);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+  box-shadow: 0 0 15px rgba(255, 89, 0, 0.2);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.alert-success-message.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+/* ========================================
+   FINE STYLE.CSS
+   ======================================== */

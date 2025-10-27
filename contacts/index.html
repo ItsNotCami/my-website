@@ -124,9 +124,8 @@
                 background: rgba(26, 26, 26, 0.85);
                 border: 1px solid rgba(255, 89, 0, 0.25);
               "
-              action="mailto:tuoindirizzo@email.com"
+              action="https://formspree.io/f/mpwoqqra"
               method="POST"
-              enctype="text/plain"
               accept-charset="UTF-8"
             >
               <div class="mb-3">
@@ -216,15 +215,6 @@
                 ></textarea>
               </div>
 
-              <!-- Honeypot anti-spam (invisibile agli utenti) -->
-              <div
-                style="position: absolute; left: -10000px"
-                aria-hidden="true"
-              >
-                <label for="hp">Lascia questo campo vuoto</label>
-                <input type="text" id="hp" name="website" tabindex="-1" />
-              </div>
-
               <div class="form-check mb-4">
                 <input
                   class="form-check-input"
@@ -238,17 +228,51 @@
                 </label>
               </div>
 
+              <!-- Hidden fields -->
+              <input
+                type="hidden"
+                name="_subject"
+                value="Nuovo contatto — NotCami"
+              />
+              <input type="hidden" name="_language" value="it" />
+              <input
+                type="hidden"
+                name="_next"
+                value="https://itsnotcami.github.io/my-website/contacts/?ok=1"
+              />
+
               <div class="d-grid">
                 <button type="submit" class="btn btn-primary-custom">
                   Invia Messaggio
                 </button>
               </div>
             </form>
-            <!-- Fine Form -->
+
+            <div
+              id="success-message"
+              class="alert-success-message"
+              role="alert"
+            >
+              <p>
+                ✅ Messaggio inviato con successo! Ti risponderò al più presto
+                💌
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Messaggio di conferma automatico -->
+    <script>
+      (function () {
+        const params = new URLSearchParams(location.search);
+        const successBox = document.getElementById("success-message");
+        if (params.get("ok") === "1" && successBox) {
+          successBox.classList.add("show");
+        }
+      })();
+    </script>
 
     <!-- Footer -->
     <footer class="footer">
