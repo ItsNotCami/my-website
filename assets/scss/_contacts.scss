@@ -17,7 +17,7 @@
   &:checked { background-color: $fnatic-orange; border-color: $fnatic-orange; }
 }
 
-/* box successo (solo se usi la pagina thanks tienilo per eventuale riuso) */
+/* box successo (solo se usi la pagina thanks tenere per eventuale riuso) */
 .alert-success-message {
   display: none; background: linear-gradient(135deg, rgba(255,89,0,.15), rgba(0,0,0,.3));
   border: 1px solid rgba(255,89,0,.5); color: $text-light; border-radius: 10px; padding: 1.5rem; margin-top: 2rem;
