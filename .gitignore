@@ -1,0 +1,10 @@
+# Node (nel caso in futuro per pacchetti locali)
+node_modules/
+
+# File temporanei / sistema
+*.log
+.DS_Store
+Thumbs.db
+
+# Mappe sorgenti (non necessarie in produzione)
+assets/css/*.map
