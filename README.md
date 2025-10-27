@@ -65,3 +65,9 @@ Realizzato con ❤️ da Camilla Salvati
 
 Junior Web Developer & Designer
 “La creatività è l’intelligenza che si diverte.” — Albert Einstein
+
+## 🛠️ Prossimi aggiornamenti
+
+- Aggiunta sezione Blog
+- Nuove animazioni CSS
+- Versione dark/light mode
