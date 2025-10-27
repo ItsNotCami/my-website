@@ -1,9 +1,10 @@
-// style.scss (Sass principale)
-@import "variables";
-@import "base";
-@import "navbar";
-@import "hero";
-@import "about";
-@import "portfolio";
-@import "contacts";
-@import "footer";
+// style.scss — file principale Sass
+@use "variables" as *;
+@use "base";
+@use "navbar";
+@use "hero";
+@use "about";
+@use "portfolio";
+@use "contacts";
+@use "footer";
+

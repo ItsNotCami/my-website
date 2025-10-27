@@ -1,0 +1,23 @@
+// _base.scss
+@use "variables" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: $fnatic-black;
+  color: $text-light;
+  overflow-x: hidden;
+}
+
+section {
+  scroll-margin-top: 80px;
+}

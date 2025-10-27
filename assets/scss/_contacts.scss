@@ -1,0 +1,18 @@
+// _contacts.scss
+@use "variables" as *;
+
+.form-control, .form-select {
+  background-color: rgba(26, 26, 26, 0.9);
+  color: $text-light;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  &::placeholder {
+    color: $text-gray;
+  }
+
+  &:focus {
+    background-color: rgba(26, 26, 26, 0.95);
+    border-color: rgba(255, 89, 0, 0.6);
+    box-shadow: 0 0 0 0.2rem rgba(255, 89, 0, 0.25);
+  }
+}

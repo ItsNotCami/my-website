@@ -1,0 +1,16 @@
+// _about.scss
+@use "variables" as *;
+
+.about-section {
+  padding: 6rem 0;
+  background: linear-gradient(180deg, $fnatic-dark 0%, $fnatic-black 100%);
+  color: $text-light;
+
+  .section-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, $text-light 0%, $fnatic-orange 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

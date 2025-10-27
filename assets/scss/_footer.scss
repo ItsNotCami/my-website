@@ -1,0 +1,13 @@
+// _footer.scss
+@use "variables" as *;
+
+.footer {
+  background-color: $fnatic-black;
+  padding: 2rem 0;
+  text-align: center;
+
+  .footer-text {
+    color: $text-gray;
+    margin-bottom: 0.5rem;
+  }
+}
