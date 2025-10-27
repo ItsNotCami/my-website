@@ -77,7 +77,7 @@ section {
     filter: drop-shadow(0 0 10px var(--fnatic-orange));
 }
 
-/* Checkbox nascosto per menu mobile (solo CSS) */
+/* Checkbox nascosto per menu mobile */
 .navbar-toggle-checkbox {
     display: none;
 }
@@ -1129,4 +1129,44 @@ a:focus:not(:focus-visible),
     .progetto-title {
         font-size: 1.3rem;
     }
+}
+
+/* ========================================
+   PATCH A — Scroll ancora "Skills"
+   ======================================== */
+#skills {
+  scroll-margin-top: 100px;
+}
+
+/* ========================================
+   PATCH B — Form Contatti (dark theme coerente)
+   ======================================== */
+.form-control,
+.form-select {
+  background-color: rgba(26, 26, 26, 0.9);
+  color: var(--text-light);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.form-control::placeholder {
+  color: var(--text-gray);
+  opacity: 1;
+}
+
+.form-control:focus,
+.form-select:focus {
+  background-color: rgba(26, 26, 26, 0.95);
+  color: var(--text-light);
+  border-color: rgba(255, 89, 0, 0.6);
+  box-shadow: 0 0 0 0.2rem rgba(255, 89, 0, 0.25);
+}
+
+.form-check-input {
+  background-color: #222;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.form-check-input:checked {
+  background-color: var(--fnatic-orange);
+  border-color: var(--fnatic-orange);
 }

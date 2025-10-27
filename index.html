@@ -8,6 +8,34 @@
       name="description"
       content="Camilla — Web Developer & Designer. Progetti, competenze e contatti."
     />
+    <!-- Open Graph (per Discord, WhatsApp, LinkedIn) -->
+    <meta property="og:title" content="NotCami | Web Developer & Designer" />
+    <meta
+      property="og:description"
+      content="Portfolio di Camilla — Web Developer & Designer. Scopri progetti, competenze e contatti."
+    />
+    <meta
+      property="og:image"
+      content="https://itsnotcami.github.io/my-website/assets/img/preview.png"
+    />
+    <meta
+      property="og:url"
+      content="https://itsnotcami.github.io/my-website/"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="NotCami" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="NotCami | Web Developer & Designer" />
+    <meta
+      name="twitter:description"
+      content="Portfolio di Camilla — Web Developer & Designer. Scopri progetti, competenze e contatti."
+    />
+    <meta
+      name="twitter:image"
+      content="https://itsnotcami.github.io/my-website/assets/img/preview.jpg"
+    />
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
@@ -46,12 +74,12 @@
       aria-label="Main Navigation"
     >
       <div class="container">
-        <a class="navbar-brand" href="#home">
+        <a class="navbar-brand" href="index.html">
           <img src="assets/img/logo.svg" alt="Logo NotCami" />
           <span>NotCami</span>
         </a>
 
-        <!-- Checkbox per toggle menu mobile (solo CSS) -->
+        <!-- Checkbox per toggle menu mobile -->
         <input
           id="nav-toggle"
           class="navbar-toggle-checkbox"
@@ -67,15 +95,14 @@
             <li class="nav-item">
               <a class="nav-link" href="#about">About</a>
             </li>
-             <li class="nav-item">
+            <li class="nav-item">
               <a class="nav-link" href="#skills">Skills</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../my-website/portfolio/index.html">Progetti</a>
+              <a class="nav-link" href="portfolio/index.html">Progetti</a>
             </li>
-           
             <li class="nav-item">
-              <a class="nav-link" href="../my-website/contacts/index.html">Contatti</a>
+              <a class="nav-link" href="contacts/index.html">Contatti</a>
             </li>
           </ul>
         </div>
@@ -98,11 +125,15 @@
               fanno la differenza.
             </p>
             <div class="d-flex flex-column flex-md-row gap-3">
-              <a href="#progetti" class="btn btn-primary-custom" role="button">
+              <a
+                href="portfolio/index.html"
+                class="btn btn-primary-custom"
+                role="button"
+              >
                 Scopri i Progetti
               </a>
               <a
-                href="../my-website/contacts/index.html"
+                href="contacts/index.html"
                 class="btn btn-secondary-custom"
                 role="button"
               >
@@ -114,7 +145,7 @@
             <div class="floating">
               <img
                 src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 500'%3E%3Crect fill='%231A1A1A' width='500' height='500'/%3E%3Ccircle cx='250' cy='250' r='150' fill='none' stroke='%23FF5900' stroke-width='4'/%3E%3Ccircle cx='250' cy='250' r='100' fill='none' stroke='%23FF5900' stroke-width='3' opacity='0.6'/%3E%3Ccircle cx='250' cy='250' r='50' fill='%23FF5900' opacity='0.8'/%3E%3Ctext x='250' y='265' font-size='80' fill='%23FFFFFF' text-anchor='middle' font-family='Arial, sans-serif' font-weight='bold'%3E%7B %7D%3C/text%3E%3C/svg%3E"
-                alt="Hero Image rappresentante codice"
+                alt="Illustrazione hero con cerchi arancioni"
               />
             </div>
           </div>
@@ -161,6 +192,15 @@
               giorno dopo giorno, sia nel lavoro che nella vita personale.
             </p>
 
+            <p class="about-text">
+              Oltre allo sviluppo web, mi occupo anche della
+              <strong>creazione e gestione di server Discord</strong>,
+              progettati per community, team di gioco o brand. Sviluppo inoltre
+              <strong>bot e app integrate nell’ecosistema Discord</strong>, con
+              funzioni personalizzate come moderazione, automazioni e pannelli
+              di controllo intuitivi.
+            </p>
+
             <ul class="about-list">
               <li>🎓 Master in Web Development (Start2Impact)</li>
               <li>
@@ -173,11 +213,21 @@
               <li>
                 🎮 Nel tempo libero gioco e creo contenuti legati al gaming
               </li>
+              <li>
+                ⚙️ Sviluppo bot e app per Discord, automazioni e community
+                design
+              </li>
             </ul>
 
             <div class="mt-4">
-              <a href="../my-website/portfolio/index.html" class="btn-project">Vedi Progetti</a>
-              <a href="../my-website/contacts/index.html" class="btn-project-outline">Contattami</a>
+              <a href="../my-website/portfolio/index.html" class="btn-project"
+                >Vedi Progetti</a
+              >
+              <a
+                href="../my-website/contacts/index.html"
+                class="btn-project-outline"
+                >Contattami</a
+              >
             </div>
           </div>
 
@@ -203,6 +253,7 @@
                   <li class="skill-item">Bootstrap / Responsive</li>
                   <li class="skill-item">Git &amp; GitHub</li>
                   <li class="skill-item">Design tools (Canva)</li>
+                  <li class="skill-item">Discord Bot & App Development</li>
                 </ul>
               </div>
 
@@ -260,15 +311,18 @@
         </div>
       </div>
     </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container text-center">
+        <p class="footer-text">
+          &copy; 2024 Camilla. Tutti i diritti riservati.
+        </p>
+        <p class="footer-text">
+          Realizzato con <span role="img" aria-label="cuore">❤️</span> da
+          Camilla
+        </p>
+      </div>
+    </footer>
   </body>
-  <footer class="footer">
-    <div class="container text-center">
-      <p class="footer-text">
-        &copy; 2024 Camilla. Tutti i diritti riservati.
-      </p>
-      <p class="footer-text">
-        Realizzato con
-        <span role="img" aria-label="cuore">❤️</span> da Camilla
-      </p>
-    </div>  
 </html>

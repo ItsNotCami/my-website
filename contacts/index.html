@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contatti | Not Cami</title>
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico" />
     <link
@@ -18,29 +19,41 @@
       sizes="32x32"
       href="../assets/img/favicon-32x32.png"
     />
+
+    <!-- Bootstrap CSS -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
       rel="stylesheet"
     />
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="../assets/css/style.css" />
   </head>
   <body>
-    <!-- Navbar (stesso stile della home) -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <!-- Navbar -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark"
+      role="navigation"
+      aria-label="Main Navigation"
+    >
       <div class="container">
         <a class="navbar-brand" href="../index.html">
-          <img src="../assets/img/logo.svg" alt="Logo" />
+          <img src="../assets/img/logo.svg" alt="Logo NotCami" />
           <span>NotCami</span>
         </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+
+        <!-- Checkbox per toggle menu mobile -->
+        <input
+          id="nav-toggle"
+          class="navbar-toggle-checkbox"
+          type="checkbox"
+          aria-hidden="true"
+        />
+        <label class="navbar-toggler" for="nav-toggle" aria-label="Apri menu">
+          <span class="navbar-toggler-icon" aria-hidden="true"></span>
+        </label>
+
+        <div class="navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
               <a class="nav-link" href="../index.html#about">About</a>
@@ -51,7 +64,6 @@
             <li class="nav-item">
               <a class="nav-link" href="../portfolio/index.html">Progetti</a>
             </li>
-
             <li class="nav-item">
               <a class="nav-link active" href="index.html">Contatti</a>
             </li>
@@ -65,56 +77,75 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-8">
-            <h2 class="hero-title text-center mb-4">Contattami</h2>
+            <h1 class="hero-title text-center mb-4">Contattami</h1>
             <p class="hero-subtitle text-center mb-5">
               Vuoi collaborare con me o chiedere informazioni sui miei progetti?
               Compila il form qui sotto!
             </p>
 
             <!-- Form contatti -->
-            <form class="bg-dark p-4 rounded-4 shadow" novalidate>
+            <!-- NB: mailto apre il client di posta dell’utente -->
+            <form
+              class="p-4 rounded-4"
+              style="
+                background: rgba(26, 26, 26, 0.85);
+                border: 1px solid rgba(255, 89, 0, 0.25);
+              "
+              action="mailto:tuoindirizzo@email.com"
+              method="POST"
+              enctype="text/plain"
+              accept-charset="UTF-8"
+            >
               <div class="mb-3">
                 <label for="name" class="form-label">Nome e Cognome *</label>
                 <input
                   type="text"
                   class="form-control"
                   id="name"
-                  name="name"
+                  name="Nome e Cognome"
                   placeholder="Es. Camilla Rossi"
+                  autocomplete="name"
                   required
                 />
               </div>
+
               <div class="mb-3">
                 <label for="email" class="form-label">Email *</label>
                 <input
                   type="email"
                   class="form-control"
                   id="email"
-                  name="email"
+                  name="Email"
                   placeholder="esempio@mail.com"
+                  autocomplete="email"
                   required
                 />
               </div>
+
               <div class="mb-3">
                 <label for="company" class="form-label">Azienda</label>
                 <input
                   type="text"
                   class="form-control"
                   id="company"
-                  name="company"
+                  name="Azienda"
                   placeholder="Nome azienda"
+                  autocomplete="organization"
                 />
               </div>
+
               <div class="mb-3">
                 <label for="role" class="form-label">Ruolo</label>
                 <input
                   type="text"
                   class="form-control"
                   id="role"
-                  name="role"
+                  name="Ruolo"
                   placeholder="Es. Project Manager"
+                  autocomplete="organization-title"
                 />
               </div>
+
               <div class="mb-3">
                 <label for="projectType" class="form-label"
                   >Tipo progetto</label
@@ -123,43 +154,57 @@
                   type="text"
                   class="form-control"
                   id="projectType"
-                  name="projectType"
+                  name="Tipo progetto"
                   placeholder="Es. Sito web, App..."
                 />
               </div>
+
               <div class="mb-3">
                 <label for="budget" class="form-label">Budget</label>
                 <input
                   type="text"
                   class="form-control"
                   id="budget"
-                  name="budget"
+                  name="Budget"
                   placeholder="Es. 1000€ - 5000€"
+                  inputmode="numeric"
                 />
               </div>
+
               <div class="mb-3">
                 <label for="message" class="form-label">Messaggio *</label>
                 <textarea
                   class="form-control"
                   id="message"
-                  name="message"
+                  name="Messaggio"
                   rows="5"
                   placeholder="Scrivi qui il tuo messaggio"
                   required
                 ></textarea>
               </div>
+
+              <!-- Honeypot anti-spam (invisibile agli utenti) -->
+              <div
+                style="position: absolute; left: -10000px"
+                aria-hidden="true"
+              >
+                <label for="hp">Lascia questo campo vuoto</label>
+                <input type="text" id="hp" name="website" tabindex="-1" />
+              </div>
+
               <div class="form-check mb-4">
                 <input
                   class="form-check-input"
                   type="checkbox"
                   id="consent"
-                  name="consent"
+                  name="Consenso GDPR"
                   required
                 />
                 <label class="form-check-label" for="consent">
                   Acconsento al trattamento dei dati secondo GDPR *
                 </label>
               </div>
+
               <div class="d-grid">
                 <button type="submit" class="btn btn-primary-custom">
                   Invia Messaggio
@@ -171,5 +216,18 @@
         </div>
       </div>
     </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container text-center">
+        <p class="footer-text">
+          &copy; 2024 Camilla. Tutti i diritti riservati.
+        </p>
+        <p class="footer-text">
+          Realizzato con <span role="img" aria-label="cuore">❤️</span> da
+          Camilla
+        </p>
+      </div>
+    </footer>
   </body>
 </html>
