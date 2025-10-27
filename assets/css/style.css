@@ -216,6 +216,17 @@ a:focus:not(:focus-visible),
     animation: pulse 8s ease-in-out infinite;
 }
 
+/* Fix: sblocca interazione con form nella sezione hero */
+.hero::before {
+  pointer-events: none; /* non blocca più i click */
+  z-index: 0;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1; /* mette il form sopra */
+}
+
 @keyframes pulse {
     0%, 100% {
         transform: scale(1);
