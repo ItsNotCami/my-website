@@ -72,3 +72,7 @@ Junior Web Developer & Designer
 - Aggiunta sezione Blog
 - Nuove animazioni CSS
 - Versione dark/light mode
+
+Le decorazioni circolari del sito sono generate interamente in CSS, senza immagini.
+Sono elementi <div> con border-radius: 50%, border arancione e un’animazione rotate che crea un effetto dinamico di movimento leggero.
+Questo approccio riduce il peso della pagina e rende il design più coerente e personalizzabile.
