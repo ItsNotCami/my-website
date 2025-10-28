@@ -750,6 +750,21 @@ a:focus:not(:focus-visible),
 }
 .progetti .section-header {
   text-align: center;
+  margin-bottom: 1.5rem;
+}
+.progetti .section-header .section-title {
+  font-size: clamp(2rem, 1.5rem + 1vw, 3rem);
+  font-weight: 900;
+  margin-bottom: 0.75rem;
+  background: linear-gradient(135deg, #ffffff 0%, #ff5900 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 1.5px;
+}
+.progetti .section-header .section-subtitle {
+  color: #b0b0b0;
+  font-size: 1.1rem;
 }
 .progetti .progetti-grid {
   display: grid;
@@ -1026,6 +1041,23 @@ a:focus:not(:focus-visible),
   display: block;
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Spazio extra sotto alla sezione contatti (prima del footer) */
+#contact.hero {
+  padding-top: 4rem; /* opzionale: un filo meno spazio sopra */
+  padding-bottom: 8rem; /* più aria sotto = footer non appiccicato */
+}
+
+/* Mobile: leggermente meno per non fare scroll inutile */
+@media (max-width: 768px) {
+  #contact.hero {
+    padding-bottom: 6rem;
+  }
+}
+/* piccolo respiro sotto il box successo, se/quando appare */
+#contact .alert-success-message {
+  margin-bottom: 2rem;
 }
 
 /* già gestito in _base.scss, tieni qui solo extra */

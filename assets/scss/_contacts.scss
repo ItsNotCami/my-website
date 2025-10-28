@@ -26,3 +26,22 @@
 
   &.show { display: block; opacity: 1; transform: translateY(0); }
 }
+
+/* Spazio extra sotto alla sezione contatti (prima del footer) */
+#contact.hero {
+  padding-top: 4rem;        /* opzionale: un filo meno spazio sopra */
+  padding-bottom: 8rem;     /* più aria sotto = footer non appiccicato */
+}
+
+/* Mobile: leggermente meno per non fare scroll inutile */
+@media (max-width: 768px) {
+  #contact.hero {
+    padding-bottom: 6rem;
+  }
+}
+
+/* piccolo respiro sotto il box successo, se/quando appare */
+#contact .alert-success-message {
+  margin-bottom: 2rem;
+}
+
