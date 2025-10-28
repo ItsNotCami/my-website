@@ -167,3 +167,10 @@
   .progetto-info { padding: 1.5rem; }
   .progetto-title { font-size: 1.3rem; }
 }
+
+.progetto-card--contain .progetto-image {
+  background: #111; /* colore di sfondo neutro dietro */
+}
+.progetto-card--contain .progetto-image img {
+  object-fit: contain;
+}

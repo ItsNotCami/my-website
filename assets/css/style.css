@@ -995,6 +995,14 @@ a:focus:not(:focus-visible),
     font-size: 1.3rem;
   }
 }
+.progetto-card--contain .progetto-image {
+  background: #111; /* colore di sfondo neutro dietro */
+}
+
+.progetto-card--contain .progetto-image img {
+  object-fit: contain;
+}
+
 .form-control, .form-select {
   background-color: rgba(26, 26, 26, 0.9);
   color: #ffffff;
