@@ -21,34 +21,37 @@ Mostra i miei progetti, le mie competenze e un form di contatto funzionante.
 
 ## 🧩 Struttura del progetto
 
+```
 my-website/
 │
-├── index.html → Homepage / CV
-├── portfolio/index.html → Pagina dei progetti
-├── contacts/index.html → Pagina contatti (form)
-├── .gitignore → Per file temp
+├── index.html                  → Homepage / CV
+├── portfolio/
+│   └── index.html              → Pagina dei progetti
+├── contacts/
+│   └── index.html              → Pagina contatti (form)
+├── .gitignore                  → Esclusione file temporanei
 │
 ├── assets/
-│ ├── css/
-│ │ └── style.css → CSS generato da Sass
-│ ├── scss/
-│ │ ├── style.scss → File principale Sass
-│ │ ├── \_variables.scss
-│ │ ├── \_navbar.scss
-│ │ ├── \_hero.scss
-│ │ ├── \_decorations.scss
-│ │ ├── \_about.scss
-│ │ ├── \_timeline.scss
-│ │ ├── \_portfolio.scss
-│ │ ├── \_contacts.scss
-│ │ ├── \_footer.scss
-│ │ └── \_responsive.scss
-│ └── img/
-│ ├── logo.svg
-│ └── favicon.ico
-│
+│   ├── css/
+│   │   └── style.css           → CSS compilato da Sass
+│   ├── scss/
+│   │   ├── style.scss          → File principale Sass
+│   │   ├── _variables.scss
+│   │   ├── _navbar.scss
+│   │   ├── _hero.scss
+│   │   ├── _decorations.scss
+│   │   ├── _about.scss
+│   │   ├── _timeline.scss
+│   │   ├── _portfolio.scss
+│   │   ├── _contacts.scss
+│   │   ├── _footer.scss
+│   │   └── _responsive.scss
+│   └── img/
+│       ├── logo.svg
+│       └── favicon.ico
 │
 └── README.md
+```
 
 📬 Contatti
 
