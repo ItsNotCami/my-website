@@ -63,6 +63,8 @@ Puoi contattarmi tramite il form nel sito o seguirmi su:
 
 [Discord](https://discord.com/invite/pmD75pjj6h)
 
+[Instagram](https://www.instagram.com/its__not__cami/)
+
 📢 Crediti
 
 Realizzato con ❤️ da Camilla Salvati
