@@ -647,7 +647,7 @@ a:focus:not(:focus-visible),
 }
 .stat-grid .stat .stat-label {
   font-size: 0.85rem;
-  color: var(--text-gray);
+  color: #b0b0b0;
   margin-top: 0.5rem;
 }
 .stat-grid .stat:hover {
@@ -738,7 +738,7 @@ a:focus:not(:focus-visible),
   margin-top: 3rem;
 }
 
-/* large */
+/* large — a livello root */
 .progetto-large {
   grid-column: span 2;
   grid-row: span 2;
@@ -818,21 +818,16 @@ a:focus:not(:focus-visible),
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }
-.progetto-card {
-  /* ========================================
-     TAG — statici e centrati
-  ======================================== */
-}
 .progetto-card .progetto-tags {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* centrati orizzontalmente */
+  justify-content: center;
   gap: 0.5rem;
   margin: 1rem 0;
 }
 .progetto-card .progetto-tags .tag {
   background: rgba(255, 255, 255, 0.05);
-  color: var(--text-light);
+  color: #ffffff;
   padding: 0.35rem 0.7rem;
   border-radius: 12px;
   font-size: 0.8rem;
@@ -845,27 +840,7 @@ a:focus:not(:focus-visible),
   background: rgba(255, 255, 255, 0.08);
   border-color: rgba(255, 255, 255, 0.15);
   transform: none;
-  color: var(--text-light);
-}
-.progetto-card {
-  /* layout “large” solo su desktop */
-}
-@media (min-width: 992px) {
-  .progetto-card .progetto-large {
-    grid-column: span 2;
-    grid-row: span 2;
-  }
-}
-.progetto-card {
-  /* piccoli ritocchi mobile */
-}
-@media (max-width: 768px) {
-  .progetto-card .progetto-body {
-    padding: 1.1rem;
-  }
-  .progetto-card .progetto-title {
-    font-size: 1.15rem;
-  }
+  color: #ffffff;
 }
 .progetto-card .progetto-links {
   display: flex;
@@ -943,7 +918,21 @@ a:focus:not(:focus-visible),
   font-size: 1rem;
 }
 
-/* responsive griglia */
+/* card contain */
+.progetto-card--contain .progetto-image {
+  background: #111;
+}
+.progetto-card--contain .progetto-image img {
+  object-fit: contain;
+}
+
+/* media query a livello root */
+@media (min-width: 992px) {
+  .progetto-large {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+}
 @media (max-width: 768px) {
   .progetti .progetti-grid {
     grid-template-columns: 1fr;
@@ -960,14 +949,6 @@ a:focus:not(:focus-visible),
     font-size: 1.3rem;
   }
 }
-.progetto-card--contain .progetto-image {
-  background: #111; /* colore di sfondo neutro dietro */
-}
-
-.progetto-card--contain .progetto-image img {
-  object-fit: contain;
-}
-
 .form-control, .form-select {
   background-color: rgba(26, 26, 26, 0.9);
   color: #ffffff;
