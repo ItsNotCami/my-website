@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2a2a2a"/>
+      <stop offset="100%" stop-color="#0d0d0d"/>
+    </radialGradient>
+    <radialGradient id="glowOrange" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff5900" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#ff5900" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softglow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="screenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1a1a1a"/>
+      <stop offset="100%" stop-color="#111111"/>
+    </linearGradient>
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff5900"/>
+      <stop offset="100%" stop-color="#cc4700"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="500" height="500" fill="url(#bgGrad)" rx="20"/>
+
+  <!-- Glow background -->
+  <circle cx="250" cy="250" r="200" fill="url(#glowOrange)"/>
+
+  <!-- Grid pattern -->
+  <g opacity="0.06" stroke="#ffffff" stroke-width="0.5">
+    <line x1="0" y1="50" x2="500" y2="50"/>
+    <line x1="0" y1="100" x2="500" y2="100"/>
+    <line x1="0" y1="150" x2="500" y2="150"/>
+    <line x1="0" y1="200" x2="500" y2="200"/>
+    <line x1="0" y1="250" x2="500" y2="250"/>
+    <line x1="0" y1="300" x2="500" y2="300"/>
+    <line x1="0" y1="350" x2="500" y2="350"/>
+    <line x1="0" y1="400" x2="500" y2="400"/>
+    <line x1="0" y1="450" x2="500" y2="450"/>
+    <line x1="50" y1="0" x2="50" y2="500"/>
+    <line x1="100" y1="0" x2="100" y2="500"/>
+    <line x1="150" y1="0" x2="150" y2="500"/>
+    <line x1="200" y1="0" x2="200" y2="500"/>
+    <line x1="250" y1="0" x2="250" y2="500"/>
+    <line x1="300" y1="0" x2="300" y2="500"/>
+    <line x1="350" y1="0" x2="350" y2="500"/>
+    <line x1="400" y1="0" x2="400" y2="500"/>
+    <line x1="450" y1="0" x2="450" y2="500"/>
+  </g>
+
+  <!-- Decorative circles -->
+  <circle cx="250" cy="250" r="180" fill="none" stroke="#ff5900" stroke-width="1" opacity="0.15"/>
+  <circle cx="250" cy="250" r="140" fill="none" stroke="#ff5900" stroke-width="0.5" opacity="0.1"/>
+
+  <!-- Laptop body -->
+  <rect x="110" y="170" width="280" height="185" rx="12" fill="#1a1a1a" stroke="#ff5900" stroke-width="2"/>
+
+  <!-- Screen -->
+  <rect x="122" y="182" width="256" height="161" rx="6" fill="url(#screenGrad)"/>
+
+  <!-- Screen border glow -->
+  <rect x="122" y="182" width="256" height="161" rx="6" fill="none" stroke="#ff5900" stroke-width="0.5" opacity="0.4"/>
+
+  <!-- Code lines on screen -->
+  <!-- Line 1 - orange keyword -->
+  <rect x="138" y="200" width="40" height="7" rx="3" fill="#ff5900" opacity="0.9" filter="url(#glow)"/>
+  <!-- Line 1 - white text -->
+  <rect x="184" y="200" width="70" height="7" rx="3" fill="#ffffff" opacity="0.7"/>
+  <!-- Line 1 - bracket -->
+  <rect x="260" y="200" width="15" height="7" rx="3" fill="#ff5900" opacity="0.6"/>
+
+  <!-- Line 2 - indented -->
+  <rect x="150" y="216" width="25" height="6" rx="3" fill="#b0b0b0" opacity="0.5"/>
+  <rect x="181" y="216" width="55" height="6" rx="3" fill="#ff5900" opacity="0.7"/>
+  <rect x="242" y="216" width="8" height="6" rx="3" fill="#ffffff" opacity="0.5"/>
+  <rect x="256" y="216" width="45" height="6" rx="3" fill="#b0b0b0" opacity="0.4"/>
+
+  <!-- Line 3 -->
+  <rect x="150" y="230" width="35" height="6" rx="3" fill="#b0b0b0" opacity="0.5"/>
+  <rect x="191" y="230" width="8" height="6" rx="3" fill="#ffffff" opacity="0.4"/>
+  <rect x="205" y="230" width="60" height="6" rx="3" fill="#ff5900" opacity="0.6"/>
+
+  <!-- Line 4 -->
+  <rect x="150" y="244" width="50" height="6" rx="3" fill="#ffffff" opacity="0.3"/>
+  <rect x="206" y="244" width="8" height="6" rx="3" fill="#b0b0b0" opacity="0.5"/>
+  <rect x="220" y="244" width="40" height="6" rx="3" fill="#ff5900" opacity="0.5"/>
+
+  <!-- Line 5 - closing -->
+  <rect x="138" y="258" width="15" height="7" rx="3" fill="#ff5900" opacity="0.9" filter="url(#glow)"/>
+
+  <!-- Empty line -->
+
+  <!-- Line 7 -->
+  <rect x="138" y="278" width="30" height="6" rx="3" fill="#b0b0b0" opacity="0.4"/>
+  <rect x="174" y="278" width="8" height="6" rx="3" fill="#ffffff" opacity="0.5"/>
+  <rect x="188" y="278" width="80" height="6" rx="3" fill="#ff5900" opacity="0.55"/>
+  <rect x="274" y="278" width="8" height="6" rx="3" fill="#ffffff" opacity="0.4"/>
+
+  <!-- Line 8 -->
+  <rect x="138" y="292" width="55" height="6" rx="3" fill="#b0b0b0" opacity="0.35"/>
+  <rect x="199" y="292" width="8" height="6" rx="3" fill="#ffffff" opacity="0.4"/>
+  <rect x="213" y="292" width="35" height="6" rx="3" fill="#ff5900" opacity="0.5"/>
+
+  <!-- Cursor blinking line -->
+  <rect x="138" y="308" width="10" height="8" rx="2" fill="#ff5900" opacity="0.9" filter="url(#glow)">
+    <animate attributeName="opacity" values="0.9;0;0.9" dur="1.2s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Laptop base -->
+  <rect x="90" y="355" width="320" height="18" rx="4" fill="#1a1a1a" stroke="#ff5900" stroke-width="1.5"/>
+  <!-- Trackpad -->
+  <rect x="215" y="360" width="70" height="8" rx="3" fill="#2a2a2a" stroke="#ff5900" stroke-width="0.5" opacity="0.6"/>
+
+  <!-- Floating elements -->
+  <!-- Top left - HTML tag -->
+  <g filter="url(#glow)" opacity="0.85">
+    <rect x="40" y="100" width="75" height="30" rx="8" fill="#1a1a1a" stroke="#ff5900" stroke-width="1.5"/>
+    <text x="77" y="120" font-family="monospace" font-size="11" fill="#ff5900" text-anchor="middle">&lt;html/&gt;</text>
+  </g>
+
+  <!-- Top right - CSS -->
+  <g filter="url(#glow)" opacity="0.8">
+    <rect x="385" y="90" width="70" height="30" rx="8" fill="#1a1a1a" stroke="#ff5900" stroke-width="1.5"/>
+    <text x="420" y="110" font-family="monospace" font-size="11" fill="#ff5900" text-anchor="middle">.scss {}</text>
+  </g>
+
+  <!-- Bottom left - JS -->
+  <g filter="url(#glow)" opacity="0.75">
+    <rect x="35" y="390" width="60" height="30" rx="8" fill="#1a1a1a" stroke="#ff5900" stroke-width="1.5"/>
+    <text x="65" y="410" font-family="monospace" font-size="11" fill="#ff5900" text-anchor="middle">JS()</text>
+  </g>
+
+  <!-- Bottom right - Git -->
+  <g filter="url(#glow)" opacity="0.75">
+    <rect x="400" y="385" width="65" height="30" rx="8" fill="#1a1a1a" stroke="#ff5900" stroke-width="1.5"/>
+    <text x="432" y="405" font-family="monospace" font-size="11" fill="#ff5900" text-anchor="middle">git ✓</text>
+  </g>
+
+  <!-- Decorative dots -->
+  <circle cx="75" cy="200" r="3" fill="#ff5900" opacity="0.4" filter="url(#glow)"/>
+  <circle cx="430" cy="220" r="3" fill="#ff5900" opacity="0.4" filter="url(#glow)"/>
+  <circle cx="60" cy="310" r="2" fill="#ff5900" opacity="0.3"/>
+  <circle cx="445" cy="300" r="2" fill="#ff5900" opacity="0.3"/>
+
+  <!-- Corner accents -->
+  <path d="M 30 30 L 60 30 L 60 35 L 35 35 L 35 60 L 30 60 Z" fill="#ff5900" opacity="0.4"/>
+  <path d="M 470 30 L 440 30 L 440 35 L 465 35 L 465 60 L 470 60 Z" fill="#ff5900" opacity="0.4"/>
+  <path d="M 30 470 L 60 470 L 60 465 L 35 465 L 35 440 L 30 440 Z" fill="#ff5900" opacity="0.4"/>
+  <path d="M 470 470 L 440 470 L 440 465 L 465 465 L 465 440 L 470 440 Z" fill="#ff5900" opacity="0.4"/>
+</svg>
