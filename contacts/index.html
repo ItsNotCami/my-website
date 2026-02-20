@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="it">
   <head>
     <meta charset="UTF-8" />
@@ -75,18 +75,21 @@
           <span>NotCami</span>
         </a>
 
-        <!-- Checkbox per toggle menu mobile -->
-        <input
-          id="nav-toggle"
-          class="navbar-toggle-checkbox"
-          type="checkbox"
-          aria-hidden="true"
-        />
-        <label class="navbar-toggler" for="nav-toggle" aria-label="Apri menu">
-          <span class="navbar-toggler-icon" aria-hidden="true"></span>
-        </label>
+        <button
+          class="navbar-toggler custom-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Apri menu"
+        >
+          <span class="toggler-icon top-bar"></span>
+          <span class="toggler-icon middle-bar"></span>
+          <span class="toggler-icon bottom-bar"></span>
+        </button>
 
-        <div class="navbar-collapse" id="navbarNav">
+        <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
               <a class="nav-link" href="../index.html#about">About</a>
@@ -280,7 +283,7 @@
     <footer class="footer">
       <div class="container text-center">
         <p class="footer-text">
-          &copy; 2024 Camilla. Tutti i diritti riservati.
+          &copy; 2025 Camilla. Tutti i diritti riservati.
         </p>
         <p class="footer-text">
           Realizzato con <span role="img" aria-label="cuore">❤️</span> da
@@ -326,5 +329,6 @@
         </p>
       </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

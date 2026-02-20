@@ -1,71 +1,137 @@
 @use "variables" as *;
 
-.custom-navbar {
+.navbar {
   background-color: rgba(13,13,13,.95);
   backdrop-filter: blur(10px);
   border-bottom: 2px solid $fnatic-orange;
   box-shadow: 0 4px 20px rgba(255,89,0,.2);
   padding: 1rem 0;
+}
 
-  .navbar-brand {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: $text-light !important;
-    transition: .3s;
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: $text-light !important;
+  transition: .3s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
 
-    &:hover {
-      color: $fnatic-orange !important;
-      transform: scale(1.05);
-    }
-
-    img {
-      height: 40px;
-      width: auto;
-      transition: .3s;
-    }
-    &:hover img {
-      filter: drop-shadow(0 0 10px $fnatic-orange);
-    }
+  &:hover {
+    color: $fnatic-orange !important;
+    transform: scale(1.05);
   }
 
-  .nav-link {
-    color: $text-gray !important;
-    font-weight: 500;
-    margin: 0 1rem;
-    position: relative;
-    transition: color .3s;
-
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: -5px;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background-color: $fnatic-orange;
-      transition: width .3s;
-    }
-    &:hover {
-      color: $fnatic-orange !important;
-    }
-    &:hover::after {
-      width: 100%;
-    }
+  img {
+    height: 40px;
+    width: auto;
+    transition: .3s;
   }
 
-  .navbar-toggler {
-    border: 2px solid $fnatic-orange;
-    border-radius: 5px;
-    transition: .3s;
-
-    &:hover {
-      background-color: $fnatic-orange;
-    }
-
-    .navbar-toggler-icon {
-      filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(105%) contrast(105%);
-    }
+  &:hover img {
+    filter: drop-shadow(0 0 10px $fnatic-orange);
   }
 }
 
+.nav-link {
+  color: $text-gray !important;
+  font-weight: 500;
+  margin: 0 1rem;
+  position: relative;
+  transition: color .3s;
+  text-decoration: none;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: $fnatic-orange;
+    transition: width .3s;
+  }
+
+  &:hover {
+    color: $fnatic-orange !important;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+/* Rimuovi stile default Bootstrap dal toggler */
+.navbar-toggler {
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  background: transparent;
+
+  &:focus {
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+/* Hamburger custom */
+.custom-toggler {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 30px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.toggler-icon {
+  width: 28px;
+  height: 2px;
+  background-color: $fnatic-orange;
+  transition: all 0.3s ease-in-out;
+  display: block;
+}
+
+/* Animazione → X quando il menu è aperto */
+.custom-toggler[aria-expanded="true"] .top-bar {
+  transform: rotate(45deg) translate(4px, 6px);
+}
+
+.custom-toggler[aria-expanded="true"] .middle-bar {
+  opacity: 0;
+  transform: translateX(-10px);
+}
+
+.custom-toggler[aria-expanded="true"] .bottom-bar {
+  transform: rotate(-45deg) translate(4px, -6px);
+}
+
+/* Mobile: stile menu aperto */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background-color: rgba(13,13,13,.98);
+    backdrop-filter: blur(10px);
+    border-top: 2px solid $fnatic-orange;
+    padding: 1rem 0;
+  }
+
+  .navbar-nav {
+    align-items: center;
+  }
+
+  .nav-link {
+    margin: 0.5rem 0;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    width: 100%;
+    text-align: center;
+
+    &::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
 
