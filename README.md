@@ -61,8 +61,6 @@ Puoi contattarmi tramite il form nel sito o seguirmi su:
 
 [LinkedIn](https://www.linkedin.com/in/camilla-salvati-44432b312/)
 
-[Discord](https://discord.com/invite/pmD75pjj6h)
-
 [Instagram](https://www.instagram.com/its__not__cami/)
 
 📢 Crediti
